@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Nav, NavList, SVG, StyledHeader } from "./Header.styled";
-import sprite from "../../images/sprite.svg";
+import { Nav, NavList, StyledHeader } from "./Header.styled";
 
 const Header = () => {
   return (
@@ -11,9 +10,6 @@ const Header = () => {
           <h2>
             <NavLink to="/">RentalCar</NavLink>
           </h2>
-          {/* <SVG width="12" height="12">
-            <use href={`${sprite}#icon-car`}></use>
-          </SVG> */}
         </div>
 
         <NavList>

@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import sprite from "../../images/sprite.svg";
 import { SecondList, SecondText } from "../CarsCard/CarsCard.styled";
 import {
   BackdropWrrap,
@@ -13,7 +12,6 @@ import {
   Title,
   SecondItem,
   ButtonRental,
-  Svg,
 } from "./CarsModal.styled";
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -35,9 +33,9 @@ const CarsModal = ({ data, onClose }) => {
     description,
   } = data;
 
-  const newArray = address.split(",");
-  const country = newArray.slice(-1).join(",").trim();
-  const city = newArray[newArray.length - 2].trim();
+  // const newArray = address.split(",");
+  // const country = newArray.slice(-1).join(",").trim();
+  // const city = newArray[newArray.length - 2].trim();
   const rentalConditionsSplitted = rentalConditions.split("\n");
   const minimumAge = rentalConditionsSplitted[0].slice(-2);
   const finalConditions = rentalConditionsSplitted.slice(1);
@@ -87,8 +85,8 @@ const CarsModal = ({ data, onClose }) => {
         </TextWrapper>
 
         <SecondList>
-          <SecondText>{city}</SecondText>
-          <SecondText>{country}</SecondText>
+          <SecondText>{address.city}</SecondText>
+          <SecondText>{address.country}</SecondText>
           <SecondText>{rentalCompany}</SecondText>
           <SecondText>{type}</SecondText>
           <SecondText>{id}</SecondText>

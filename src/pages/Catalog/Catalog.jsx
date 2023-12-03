@@ -14,12 +14,11 @@ const Catalog = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log("1");
     if (!isMountedRef.current) {
       dispatch(fetchAdverts());
       isMountedRef.current = true;
     }
-  }, [dispatch]);
+  }, [dispatch, page]);
 
   const handleLoadmoreBtn = () => {
     dispatch(fetchAdverts());

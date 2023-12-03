@@ -1,8 +1,8 @@
-export const handleFullfiled = (state, { payload }) => {
+export const handleFullfiled = (state, action) => {
   state.page = state.page + 1;
   state.isLoading = false;
   state.error = null;
-  state.items = [...state.items, ...payload];
+  state.items = [...state.items, ...action.payload];
 };
 
 export const handlePending = (state) => {

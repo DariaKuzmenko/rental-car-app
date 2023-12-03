@@ -23,7 +23,3 @@ export const NavList = styled.ul`
   align-items: center;
   gap: 60px;
 `;
-
-export const SVG = styled.svg`
-  color: black;
-`;
