@@ -33,9 +33,9 @@ const CarsCard = ({ data }) => {
     address,
     rentalCompany,
   } = data;
-  // const newArray = address.split(",");
-  // const country = newArray.slice(-1).join(",").trim();
-  // const city = newArray[newArray.length - 2].trim();
+  const newArray = address.split(",");
+  const country = newArray.slice(-1).join(",").trim();
+  const city = newArray[newArray.length - 2].trim();
 
   const [isModalOpen, setIsOpenModal] = useState(false);
   const favorites = useSelector(selectFavorites);
@@ -81,8 +81,8 @@ const CarsCard = ({ data }) => {
           <ListText>{rentalPrice}</ListText>
         </PrimaryList>
         <SecondList>
-          <SecondText>{address.city}</SecondText>
-          <SecondText>{address.country}</SecondText>
+          <SecondText>{city}</SecondText>
+          <SecondText>{country}</SecondText>
           <SecondText>{rentalCompany}</SecondText>
           <SecondText>{type}</SecondText>
           <SecondText>{id}</SecondText>

@@ -3,6 +3,7 @@ export const handleFullfiled = (state, action) => {
   state.isLoading = false;
   state.error = null;
   state.items = [...state.items, ...action.payload];
+  console.log(state.items);
 };
 
 export const handlePending = (state) => {

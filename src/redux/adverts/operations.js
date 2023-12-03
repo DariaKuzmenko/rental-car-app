@@ -9,8 +9,12 @@ export const fetchAdverts = createAsyncThunk(
   async (_, { getState, rejectWithValue }) => {
     try {
       const state = getState();
-      const { data } = await axios.get("/adverts");
-      console.log(data);
+      const { data } = await axios.get("/adverts", {
+        params: {
+          page: state.adverts.page,
+          limit: 12,
+        },
+      });
       return data;
     } catch (error) {
       toast.error(` Something's wrong. Server error: ${error.message} `);
