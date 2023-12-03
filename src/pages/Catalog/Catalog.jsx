@@ -16,6 +16,7 @@ const Catalog = () => {
   useEffect(() => {
     if (!isMountedRef.current) {
       dispatch(fetchAdverts());
+
       isMountedRef.current = true;
     }
   }, [dispatch, page]);
